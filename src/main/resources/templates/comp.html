@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/comp.css">
+    <style>
+        .card {
+            background-color: rgb(0,167,0);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .container {
+            padding: 20px;
+        }
+        .role {
+            font-weight: bold;
+            color: white;
+            margin-bottom: 5px;
+        }
+        .salary {
+            color: white;
+            margin-bottom: 5px;
+        }
+        .phno {
+            color: white;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div th:each="job : ${jobs}">
+        <div class="card">
+            <div class="container">
+                <h4 class="role" th:text="${job.Role}"></h4>
+                <p class="salary" th:text="${job.Salary}"></p>
+                <p class="phno" th:text="${job.Phno}"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

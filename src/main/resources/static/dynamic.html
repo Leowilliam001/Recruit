@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Spring Boot Learning</title>
+    </head>
+
+    <body>
+        <h1>Greeting everyone For the Demo</h1>
+
+        <ul>
+            <li th:each="employee:${employees}">
+                <span th:text="${employee.name}"></span>
+                <span></span>
+                <span th:text="${employee.role}"></span>
+            </li>
+        </ul>
+
+        <form th:action="@{/new-employee}" method="post" th:object="${newEmployee}">
+            <input type="text" th:field="*{name}"/>
+            <input type="text" th:field="*{role}"/>
+            <input type="submit"/>
+
+        </form>
+    </body>
+
+
+
+</html>

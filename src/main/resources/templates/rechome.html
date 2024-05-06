@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jobify</title>
+    <link rel="stylesheet" href="/css/chome.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Add custom style to override chome.css */
+        .header .header-right a.active {
+            background-color: rgb(167, 0, 0); /* Change active link background color to red */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a class="logo">
+            <img src="imgs/logo.png" height="35px">
+        </a>
+        <div class="header-right">
+          
+          <a class="active" href="#home">Home</a>
+          <a href="reccont.html">Contact</a>
+          <a href="recabout.html">About</a>
+        </div>
+    </div>
+    <script src="/js/dashboard.js"></script>
+    <div class="sidebar">
+        <a class="active" href="prof.html" target="cont">Profile</a>
+
+        <a href="javascript:void(0)" onclick="loadDynamicPage();" target="cont">Dashboard</a>
+
+        <a href="new_disp" target="cont" >Hiring</a>
+        <button value="Log Out">Log Out</button>
+    </div>
+    <div class="content">   
+        <iframe name="cont" height="590px" width="1125px"></iframe>
+    </div>
+</body>
+</html>
